@@ -5,6 +5,32 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+/* Base styles for all devices */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Larger screens (desktops, tablets, etc.) */
+@media (min-width: 768px) {
+  /* Styles for tablets and larger screens */
+}
+
+/* Medium screens (mobile devices) */
+@media (max-width: 768px) {
+  /* Styles for mobile screens */
+  .social-item {
+    width: 100%;
+  }
+}
+
+/* Small screens (phones with very small resolutions) */
+@media (max-width: 480px) {
+  /* Adjustments for phones with smaller screens */
+  .footer-bottom {
+    font-size: 12px;
+    padding: 6px 0;
+  }
+}
 
 /* Navbar Styles */
 .navbar {
