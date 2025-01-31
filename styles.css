@@ -729,8 +729,8 @@ h2 {
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers image and text horizontally */
-  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Ensures image and content are centered */
+  justify-content: center;
 }
 
 .services-item:hover {
@@ -749,31 +749,21 @@ h2 {
   display: block;
 }
 
-h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: #333;
-}
-
-.services-item p {
-  font-size: 1rem;
-  color: #666;
-  line-height: 1.5;
-}
-
-/* Responsive Styles */
+/* Ensures proper centering on mobile */
 @media (max-width: 767px) {
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  .services-content {
-    grid-template-columns: 1fr;
+  .services-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important; /* Forces centering */
+    justify-content: center !important;
+    text-align: center;
   }
 
   .services-item img {
     max-width: 200px;
+    height: auto; /* Allows responsive height */
+    display: block;
+    margin: 0 auto; /* Ensures centering */
   }
 
   h3 {
