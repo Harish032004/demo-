@@ -1054,8 +1054,10 @@ h2 {
     .social-item {
         width: 100%; /* Make social items take full width */
         flex-direction: row; /* Align icon and text horizontally */
-        justify-content: center;
-        gap: 10px;
+        justify-content: flex-start; /* Align items to the left */
+        padding: 10px 20px; /* Add padding for better spacing */
+        background-color: rgba(255, 255, 255, 0.1); /* Add background for better visibility */
+        border-radius: 8px; /* Add rounded corners */
     }
 
     .social-item img {
@@ -1066,9 +1068,11 @@ h2 {
 
     .social-item span {
         font-size: 14px; /* Slightly increase font size for readability */
+        margin-left: 10px; /* Add space between icon and text */
     }
 
     .footer-bottom {
         font-size: 11px; /* Further reduce font size for very small screens */
+        padding: 0 10px; /* Add padding for better readability */
     }
 }
