@@ -965,6 +965,12 @@ h2 {
     text-align: center;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .social-media {
     display: flex;
     justify-content: center;
@@ -1010,43 +1016,59 @@ h2 {
 /* Responsive Footer */
 @media (max-width: 768px) {
     .footer {
-        padding: 20px 10px;
+        padding: 30px 10px; /* Adjust padding for smaller screens */
     }
 
     .social-media {
-        flex-direction: column;
-        align-items: center;
+        gap: 15px; /* Reduce gap between items */
     }
 
     .social-item {
-        margin-bottom: 15px;
-        width: 150px;
+        width: 100px; /* Reduce width of social items */
+    }
+
+    .social-item img {
+        width: 35px; /* Slightly reduce icon size */
+        height: 35px;
     }
 
     .social-item span {
-        font-size: 12px;
+        font-size: 12px; /* Reduce font size for smaller screens */
     }
 
     .footer-bottom {
-        font-size: 12px;
+        font-size: 12px; /* Reduce font size for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .footer {
-        padding: 20px 10px;
+        padding: 20px 10px; /* Further reduce padding for very small screens */
+    }
+
+    .social-media {
+        flex-direction: column; /* Stack social items vertically */
+        gap: 10px;
+    }
+
+    .social-item {
+        width: 100%; /* Make social items take full width */
+        flex-direction: row; /* Align icon and text horizontally */
+        justify-content: center;
+        gap: 10px;
     }
 
     .social-item img {
-        width: 30px;
+        width: 30px; /* Further reduce icon size */
         height: 30px;
+        margin-bottom: 0; /* Remove margin for horizontal layout */
     }
 
     .social-item span {
-        font-size: 12px;
+        font-size: 14px; /* Slightly increase font size for readability */
     }
 
     .footer-bottom {
-        font-size: 11px;
+        font-size: 11px; /* Further reduce font size for very small screens */
     }
 }
