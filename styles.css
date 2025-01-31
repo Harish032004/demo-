@@ -1020,53 +1020,59 @@ h2 {
     }
 
     .social-media {
-        gap: 15px; /* Reduce gap between items */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align items */
+        gap: 15px; /* Adjust spacing */
     }
 
     .social-item {
-        width: 80px; /* Reduce width of social items */
+        width: auto; /* Adjust width to fit content */
+        display: flex;
+        flex-direction: row; /* Align icon and text horizontally */
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
     }
 
     .social-item img {
-        width: 35px; /* Slightly reduce icon size */
+        width: 35px;
         height: 35px;
+        margin-bottom: 0; /* Remove margin-bottom to align text beside icon */
     }
 
     .social-item span {
-        font-size: 12px; /* Reduce font size for smaller screens */
+        font-size: 14px; /* Improve readability */
     }
 
     .footer-bottom {
-        font-size: 12px; /* Reduce font size for smaller screens */
+        font-size: 12px;
     }
 }
 
 @media (max-width: 480px) {
     .footer {
-        padding: 20px 10px; /* Further reduce padding for very small screens */
+        padding: 20px 10px;
     }
 
     .social-media {
-        gap: 10px; /* Reduce gap between items */
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center-align items */
+        gap: 10px;
     }
 
     .social-item {
-        width: 100%; /* Full width for vertical alignment */
-        margin-bottom: 15px; /* Add space between stacked items */
+        flex-direction: row; /* Ensure horizontal alignment */
+        width: auto;
     }
 
     .social-item img {
-        width: 40px; /* Maintain icon size */
+        width: 40px;
         height: 40px;
     }
 
     .social-item span {
-        font-size: 14px; /* Slightly larger text for readability */
+        font-size: 14px;
     }
 
     .footer-bottom {
-        font-size: 11px; /* Further reduce font size for very small screens */
+        font-size: 11px;
     }
 }
