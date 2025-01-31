@@ -575,6 +575,118 @@ img {
         font-size: 0.95rem;
     }
 }
+/* About Us Section Styles */
+.about-us-section {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.about-us-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-us-section .content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.about-us-section .text-content {
+  flex: 1;
+  max-width: 600px;
+  color: #333;
+}
+
+.about-us-section .text-content h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.about-us-section .text-content h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.about-us-section .text-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-us-section .text-content strong {
+  color: #000;
+  font-weight: bold;
+}
+
+.about-us-section .image-content {
+  flex: 1;
+  max-width: 500px;
+  text-align: center;
+}
+
+.about-us-section .image-content img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about-us-section {
+    padding: 40px 20px; /* Reduce padding for smaller screens */
+  }
+
+  .about-us-section .content {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    gap: 20px;
+  }
+
+  .about-us-section .text-content {
+    max-width: 100%; /* Allow text to take full width on smaller screens */
+    text-align: center; /* Center-align text on smaller screens */
+  }
+
+  .about-us-section .text-content h2 {
+    font-size: 2rem; /* Reduce font size for headings on smaller screens */
+  }
+
+  .about-us-section .text-content h3 {
+    font-size: 1.5rem; /* Reduce font size for subheadings on smaller screens */
+  }
+
+  .about-us-section .text-content p {
+    font-size: 0.9rem; /* Reduce font size for paragraphs on smaller screens */
+  }
+
+  .about-us-section .image-content img {
+    max-width: 100%; /* Allow image to take full width on smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-section .text-content h2 {
+    font-size: 1.8rem; /* Further reduce font size for very small screens */
+  }
+
+  .about-us-section .text-content h3 {
+    font-size: 1.3rem; /* Further reduce font size for very small screens */
+  }
+
+  .about-us-section .text-content p {
+    font-size: 0.85rem; /* Further reduce font size for very small screens */
+  }
+}
 /* Message Us Section */
 #message-us {
     background-color: #f9f9f9;
