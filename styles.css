@@ -973,27 +973,30 @@ h2 {
 
 .social-media {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+    justify-content: center; /* Keep items in one row */
+    align-items: center;
+    gap: 20px; /* Space between icons */
+    flex-wrap: nowrap; /* Prevent wrapping into new rows */
+    overflow-x: auto; /* Allow scrolling if screen is too small */
 }
 
+/* Social Media Icons & Text */
 .social-item {
     text-align: center;
     color: #f0f0f0;
     text-decoration: none;
     transition: transform 0.3s, color 0.3s;
-    width: 100px; /* Fixed width for better alignment */
+    width: 80px; /* Keep uniform width */
     display: flex;
     flex-direction: column;
     align-items: center;
+    white-space: nowrap; /* Prevent text from breaking */
 }
 
 .social-item img {
     width: 40px;
     height: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border-radius: 50%;
     transition: transform 0.3s;
 }
@@ -1007,72 +1010,36 @@ h2 {
     transform: translateY(-5px);
 }
 
+/* Footer Bottom Text */
 .footer-bottom {
     margin-top: 20px;
     font-size: 14px;
     color: #b3b3b3;
 }
 
-/* Responsive Footer for Mobile */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .footer {
-        padding: 30px 10px; /* Adjust padding for smaller screens */
-    }
-
     .social-media {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center-align items */
-        gap: 15px; /* Adjust spacing */
+        justify-content: flex-start; /* Keep horizontal alignment */
+        overflow-x: auto; /* Allow scrolling if necessary */
+        padding: 10px 0;
     }
 
     .social-item {
-        width: auto; /* Adjust width to fit content */
-        display: flex;
-        flex-direction: row; /* Align icon and text horizontally */
-        align-items: center;
-        gap: 10px;
-        justify-content: center;
+        width: auto; /* Allow flexibility */
+        margin-right: 15px; /* Add spacing */
     }
 
     .social-item img {
-        width: 35px;
+        width: 35px; /* Adjust icon size */
         height: 35px;
-        margin-bottom: 0; /* Remove margin-bottom to align text beside icon */
     }
 
     .social-item span {
-        font-size: 14px; /* Improve readability */
+        font-size: 12px;
     }
 
     .footer-bottom {
         font-size: 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer {
-        padding: 20px 10px;
-    }
-
-    .social-media {
-        gap: 10px;
-    }
-
-    .social-item {
-        flex-direction: row; /* Ensure horizontal alignment */
-        width: auto;
-    }
-
-    .social-item img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .social-item span {
-        font-size: 14px;
-    }
-
-    .footer-bottom {
-        font-size: 11px;
     }
 }
