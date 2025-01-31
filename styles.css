@@ -971,22 +971,24 @@ h2 {
     padding: 0 20px;
 }
 
+/* Social Media Section */
 .social-media {
     display: flex;
-    justify-content: center; /* Keep items in one row */
+    justify-content: center; /* Keep items centered on large screens */
     align-items: center;
     gap: 20px; /* Space between icons */
-    flex-wrap: nowrap; /* Prevent wrapping into new rows */
-    overflow-x: auto; /* Allow scrolling if screen is too small */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    overflow-x: auto; /* Allow horizontal scroll if necessary */
+    padding: 10px 0;
 }
 
-/* Social Media Icons & Text */
+/* Social Media Items */
 .social-item {
     text-align: center;
     color: #f0f0f0;
     text-decoration: none;
     transition: transform 0.3s, color 0.3s;
-    width: 80px; /* Keep uniform width */
+    width: 80px; /* Default width */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1017,11 +1019,10 @@ h2 {
     color: #b3b3b3;
 }
 
-/* Responsive Adjustments */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
     .social-media {
-        justify-content: flex-start; /* Keep horizontal alignment */
-        overflow-x: auto; /* Allow scrolling if necessary */
+        justify-content: flex-start; /* Align items to the left on small screens */
         padding: 10px 0;
     }
 
@@ -1031,15 +1032,31 @@ h2 {
     }
 
     .social-item img {
-        width: 35px; /* Adjust icon size */
+        width: 35px; /* Smaller icon size */
         height: 35px;
     }
 
     .social-item span {
-        font-size: 12px;
+        font-size: 12px; /* Smaller text */
     }
 
     .footer-bottom {
-        font-size: 12px;
+        font-size: 12px; /* Smaller footer text */
+    }
+}
+
+/* Desktop Adjustments (if needed for large screens) */
+@media (min-width: 1024px) {
+    .social-media {
+        gap: 30px; /* Increase space between icons on large screens */
+    }
+
+    .social-item img {
+        width: 45px; /* Slightly larger icons for desktop */
+        height: 45px;
+    }
+
+    .footer-bottom {
+        font-size: 16px; /* Larger footer text on desktop */
     }
 }
