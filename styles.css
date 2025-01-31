@@ -961,7 +961,7 @@ h2 {
 .footer {
     background-color: #0d0d0d;
     color: #f0f0f0;
-    padding: 40px 0;
+    padding: 40px 20px;
     text-align: center;
 }
 
@@ -971,6 +971,7 @@ h2 {
     padding: 0 20px;
 }
 
+/* Social Media Icons */
 .social-media {
     display: flex;
     justify-content: center;
@@ -1007,6 +1008,7 @@ h2 {
     transform: translateY(-5px);
 }
 
+/* Footer Bottom */
 .footer-bottom {
     margin-top: 20px;
     font-size: 14px;
@@ -1014,9 +1016,9 @@ h2 {
 }
 
 /* Responsive Footer */
-@media (max-width: 768px) {
-    .footer {
-        padding: 30px 10px; /* Adjust padding for smaller screens */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
     }
 
     .social-media {
@@ -1024,55 +1026,71 @@ h2 {
     }
 
     .social-item {
-        width: 100px; /* Reduce width of social items */
+        width: 110px;
     }
 
     .social-item img {
-        width: 35px; /* Slightly reduce icon size */
+        width: 35px;
         height: 35px;
     }
 
-    .social-item span {
-        font-size: 12px; /* Reduce font size for smaller screens */
+    .footer-bottom {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .social-media {
+        gap: 12px;
+    }
+
+    .social-item {
+        width: 90px;
+    }
+
+    .social-item img {
+        width: 32px;
+        height: 32px;
     }
 
     .footer-bottom {
-        font-size: 12px; /* Reduce font size for smaller screens */
+        font-size: 12px;
     }
 }
 
 @media (max-width: 480px) {
     .footer {
-        padding: 20px 10px; /* Further reduce padding for very small screens */
+        padding: 20px 10px;
     }
 
     .social-media {
-        flex-direction: column; /* Stack social items vertically */
+        flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 
     .social-item {
-        width: 100%; /* Make social items take full width */
-        flex-direction: row; /* Align icon and text horizontally */
-        justify-content: flex-start; /* Align items to the left */
-        padding: 10px 20px; /* Add padding for better spacing */
-        background-color: rgba(255, 255, 255, 0.1); /* Add background for better visibility */
-        border-radius: 8px; /* Add rounded corners */
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8px;
     }
 
     .social-item img {
-        width: 30px; /* Further reduce icon size */
-        height: 30px;
-        margin-bottom: 0; /* Remove margin for horizontal layout */
+        width: 28px;
+        height: 28px;
+        margin-bottom: 0;
     }
 
     .social-item span {
-        font-size: 14px; /* Slightly increase font size for readability */
-        margin-left: 10px; /* Add space between icon and text */
+        font-size: 13px;
     }
 
     .footer-bottom {
-        font-size: 11px; /* Further reduce font size for very small screens */
-        padding: 0 10px; /* Add padding for better readability */
+        font-size: 11px;
     }
 }
